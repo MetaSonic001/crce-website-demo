@@ -3,7 +3,7 @@ import React from 'react';
 
 const QuickGlance = () => {
   return (
-    <aside className="w-1/4 bg-yellow-300 p-4">
+    <aside className="w-1/4 bg-yellow-300/60 rounded-lg p-4">
       <h2 className="text-lg font-bold mb-4">Quick Glance</h2>
       <ul className="space-y-2">
         <li>

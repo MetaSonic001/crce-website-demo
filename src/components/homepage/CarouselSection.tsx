@@ -3,15 +3,22 @@
 import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { Play } from 'next/font/google';
 
 const Carousel = ({ slides }) => {
   return (
-    <Splide options={{ perPage: 1 }}>
+    <Splide options={{
+      type: 'loop',
+      gap: '1rem',
+      autoplay: true,
+      pauseOnHover: false,
+      resetProgress: false,
+
+    }} >
       {slides.map((slide, index) => (
         <SplideSlide key={index}>
-          <div className="p-4 bg-white rounded-lg">
-            <h3 className="text-lg font-bold mb-2">{slide.title}</h3>
-            <p>{slide.content}</p>
+          <div className="h-full bg-white rounded-lg w-full">
+            <img src={slide.src} className='object-cover w-full' />
           </div>
         </SplideSlide>
       ))}
