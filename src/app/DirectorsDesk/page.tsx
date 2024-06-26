@@ -1,11 +1,11 @@
-import DirectorsDesk from '@/components/DirectorsDesk'
+import AllPages from '@/components/AllPages'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import React from 'react'
 
 const DirectorsDeskPage = () => {
   const sampleProps = {
-    image: "/placeholder.svg",
+    image: "/padre.jpg",
     title: "FROM DIRECTOR'S DESK",
     name: "Fr.Valerian D'Souza",
     paragraphs: [
@@ -20,7 +20,7 @@ const DirectorsDeskPage = () => {
   return (
     <div>
      <Navbar/>
-      <DirectorsDesk {...sampleProps} />
+      <AllPages {...sampleProps} />
       <Footer/>
     </div>
   );
