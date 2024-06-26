@@ -15,18 +15,18 @@ interface InfoCardProps {
 
 const InfoCard: React.FC<InfoCardProps> = ({ title, image, description, linkText, linkUrl, sectionText, linkType, childHtml }) => {
   return (
-    <div className="bg-white flex flex-col gap-3 p-4 rounded-lg shadow hover:shadow-lg transition-all ease-in ">
+    <div className="bg-white w-full flex-1 flex text-lg flex-col gap-3 p-4 rounded shadow hover:shadow-xl transition-all ease-in ">
       {sectionText && <div className="flex flex-row items-center">
         <div className="h-[1rem] bg-blue-800 w-1"></div>
         <span className="font-bold text-lg px-2">
           {sectionText}
         </span>
       </div>}
-      {image && <img src={image} alt={title} className="w-full rounded-lg" />}
+      {image && <img src={image} alt={title} className="w-full rounded" />}
       {title && <h3 className="text-lg font-bold ">{title}</h3>}
       {childHtml}
       {description && <p>{description}</p>}
-      {linkText && <Link href={linkUrl} className={`font-medium flex flex-row items-center justify-center gap-2 w-fit ${linkType === "button" ? "text-white bg-indigo-600 p-2 rounded-lg" : "text-indigo-600"} `}>{linkText}<ChevronsRight size={26} color='white' /></Link>}
+      {linkText && <Link href={linkUrl} className={`font-medium flex flex-row items-center justify-center gap-2 w-fit ${linkType === "button" ? "text-white bg-indigo-600 p-2 rounded" : "text-indigo-600"} `}>{linkText}<ChevronsRight size={26} color='white' /></Link>}
     </div>
   );
 }

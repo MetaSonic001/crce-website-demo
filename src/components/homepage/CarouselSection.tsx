@@ -17,8 +17,8 @@ const Carousel = ({ slides }) => {
     }} >
       {slides.map((slide, index) => (
         <SplideSlide key={index}>
-          <div className="h-full bg-white rounded-lg w-full">
-            <img src={slide.src} className='object-cover w-full' />
+          <div className="h-full bg-white rounded w-full">
+            <img src={slide.src} className='object-cover rounded w-full' />
           </div>
         </SplideSlide>
       ))}

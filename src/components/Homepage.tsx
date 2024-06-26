@@ -32,7 +32,7 @@ const HomepageContent = () => {
           <InfoCard
             sectionText="ADMISSION POINT OF CONTACT"
             childHtml={
-              <div className='flex flex-col items-start justify-center gap-3'>
+              <div className='flex flex-col items-start text-lg justify-center gap-3'>
                 <div className='flex flex-col gap-2' >
                   <p>For Queries & Detailed information contact Registrar Office</p>
                   <p className='font-bold' >022-67114042</p>
@@ -49,18 +49,33 @@ const HomepageContent = () => {
             linkType='button'
             linkUrl="#"
           />
+          <div className='flex flex-col gap-4 items-center justify-center' >
+            <InfoCard
+              linkText="CLICK HERE TO KNOW MORE"
+              sectionText="National Innovation and Startup Policy"
+              linkUrl="#"
+            />
+            <InfoCard
+              sectionText='Upcoming events'
+              linkText='SEE ALL EVENTS'
+              linkUrl='#'
+            />
+          </div>
           <InfoCard
             title="Our Achievements"
-            description="Check out our latest achievements and awards."
-            linkText="View Achievements"
-
-            linkUrl="#"
-          />
-          <InfoCard
-            title="Our Achievements"
-            description="Check out our latest achievements and awards."
-            linkText="View Achievements"
-            linkUrl="#"
+            childHtml={
+              <ul className='text-indigo-600 list-disc p-4' >
+                <li><a>NBA Accredited</a></li>
+                <li><a>NIRF Ranking</a></li>
+                <li><a>ARIIA Ranking</a></li>
+                <li><a>Other Rankings</a></li>
+                <li><a>Awards</a></li>
+                <li><a>Dr. S. Radhakrishan Memorial Awards 2017</a></li>
+                <li><a>Special Award from IIIE</a></li>
+                <li><a>Go Green Initiative</a></li>
+                <li><a>University Rank Holders 2018</a></li>
+              </ul>
+            }
           />
         </section>
       </main >
