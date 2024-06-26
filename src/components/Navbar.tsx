@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Navbar = () => {
   return (
@@ -8,13 +8,23 @@ const Navbar = () => {
           <img src="/fr crce logo.jpeg" alt="Logo" className="h-12" />
         </div>
         <nav className="hidden lg:flex flex-grow justify-center space-x-6 text-sm font-medium">
-          <a href="#" className="text-gray-700 hover:text-gray-900">HOME</a>
-          <a href="#" className="text-gray-700 hover:text-gray-900">ABOUT US</a>
-          <a href="#" className="text-gray-700 hover:text-gray-900">ACADEMICS</a>
-          <a href="#" className="text-gray-700 hover:text-gray-900">DEPARTMENTS</a>
-          <a href="#" className="text-gray-700 hover:text-gray-900">STUDENTS</a>
-          <a href="#" className="text-gray-700 hover:text-gray-900">ADMISSION</a>
-          <a href="#" className="text-gray-700 hover:text-gray-900">ONLINE PAYMENT</a>
+          {[
+            "HOME",
+            "ABOUT US",
+            "ACADEMICS",
+            "DEPARTMENTS",
+            "STUDENTS",
+            "ADMISSION",
+            "ONLINE PAYMENT",
+          ].map((name) => (
+            <a
+              key={name}
+              href="#"
+              className="relative text-gray-700 hover:text-gray-900 before:content-[''] before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-blue-800 before:scale-x-0 before:origin-left before:transition-transform before:duration-500 hover:before:scale-x-100"
+            >
+              {name}
+            </a>
+          ))}
         </nav>
       </div>
     </header>
