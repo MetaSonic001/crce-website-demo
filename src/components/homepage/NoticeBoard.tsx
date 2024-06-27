@@ -1,12 +1,12 @@
 // src/components/NoticeBoard.jsx
-import { ChevronsRight, Clock } from 'lucide-react';
+import { ChevronsRight, Clock, Pin } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
 const NoticeBoard = () => {
   return (
     <div className="bg-white rounded shadow text-lg ">
-      <h2 className="text-xl h-16 text-white flex items-center justify-center rounded bg-indigo-600 w-full text-center  font-bold mb-4">Notice Board</h2>
+      <h2 className="text-xl h-16 text-white flex items-center justify-center rounded bg-indigo-600 w-full text-center  font-bold mb-4"><Pin size={24} color='white' className='mr-2' /> Notice Board</h2>
       <ul className="space-y-2">
         <li className=' flex gap-2 flex-col border-b p-4 ' >
 
