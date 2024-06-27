@@ -19,9 +19,7 @@ const DirectorsDeskPage = () => {
 
   return (
     <div>
-     <Navbar/>
       <AllPages {...sampleProps} />
-      <Footer/>
     </div>
   );
 }

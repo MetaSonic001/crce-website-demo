@@ -5,7 +5,7 @@ import React from 'react'
 
 const PrincipalPage = () => {
     const sampleProps = {
-        image: "/placeholder.svg",
+        image: "/principal.jpeg",
         title: "Principal - Dr Surendra Singh Rathod",
         name: "Dr Surendra Singh Rathod",
         paragraphs: [
@@ -19,9 +19,7 @@ const PrincipalPage = () => {
 
       return (
         <div>
-         <Navbar/>
           <AllPages {...sampleProps} />
-          <Footer/>
         </div>
       );
 }

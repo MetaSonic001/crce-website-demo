@@ -18,9 +18,7 @@ const ISRO = () => {
 
       return (
         <div>
-         <Navbar/>
           <AllPages {...sampleProps} />
-          <Footer/>
         </div>
       );
 }
