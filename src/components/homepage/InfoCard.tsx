@@ -1,4 +1,4 @@
-import { ChevronsRight } from 'lucide-react'
+import { ChevronsRight } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react';
 
@@ -26,7 +26,12 @@ const InfoCard: React.FC<InfoCardProps> = ({ title, image, description, linkText
       {title && <h3 className="text-lg font-bold ">{title}</h3>}
       {childHtml}
       {description && <p>{description}</p>}
-      {linkText && <Link href={linkUrl} className={`font-medium flex flex-row items-center justify-center gap-2 w-fit ${linkType === "button" ? "text-white bg-indigo-600 p-2 rounded" : "text-indigo-600"} `}>{linkText}<ChevronsRight size={26} color='white' /></Link>}
+      {linkText && linkUrl && (
+        <Link href={linkUrl} className={`font-medium flex flex-row items-center justify-center gap-2 w-fit ${linkType === "button" ? "text-white bg-indigo-600 p-2 rounded" : "text-indigo-600"} `}>
+          {linkText}
+          <ChevronsRight size={26} color='white' />
+        </Link>
+      )}
     </div>
   );
 }

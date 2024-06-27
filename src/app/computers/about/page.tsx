@@ -4,7 +4,8 @@ import AboutDepartment from "@/components/AboutDepartment";
 const ComputerEngineeringDepartment: React.FC = () => {
   return (
     <AboutDepartment
-      name="Computer Engineering"
+      filename="Computer Engineering"
+      name="About Computer Engineering"
       videoSrc="http://fragnel.edu.in/images/crce/department/comps/compsdepttour.mp4"
       p1="The Department was established in the year 1991. The department offers B.E. in Computer Engineering, a four-year degree program with an intake of 180 students. The program has started offering honours and minor degree programs in order to facilitate the students to choose additionally the specialized courses in the emerging areas of their choice and build their competence."
       p2="The Department has competent, veteran and devoted faculty to provide industry-driven education to the students. The Department Infrastructure fulfills the requirements of academics and also supports research projects and learning skills to face the challenges of the industry. The Computer Engineering Department effectively prepares students to pursue leadership, technical and management positions in a variety of industries. The department has a strong alumni network which further enriches the program by their involvement in departmental activities and guidance to students."
