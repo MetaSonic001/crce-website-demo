@@ -25,7 +25,10 @@ const HomepageContent = () => {
             image={BaseUrl + '/images/2021/10/2-page-1-crce-building.png'}
           />
           <InfoCard
-            title="Realize Your Dreams @ FR.CRCE"
+            sectionText="Realize Your Dreams @ FR.CRCE"
+            childHtml={
+              <iframe width="auto" height="315" src="https://www.youtube.com/embed/T_3NAphp1XI?si=znwYQVT1iZCx0i9e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            }
             description="Short Video about our College Campus, Students Activities, Technology we used, Placements, Etc."
           />
           <NoticeBoard />

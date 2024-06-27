@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { ChevronDownIcon } from '@heroicons/react/solid';
+import { ChevronRight,ChevronDown } from "lucide-react";
 
 
 interface NavItem {
@@ -31,15 +31,17 @@ const Navbar:React.FC = () => {
 
 
   const renderDropdown = (items: NavItem[], level: number = 0) => (
-    <ul className={`absolute ${level === 0 ? 'left-0' : 'left-full'} top-0 mt-1 bg-white border shadow-md rounded-lg w-max z-50`}>
+    <ul className={`absolute top-7 ${level === 0 ? 'left-0' : 'left-full'} top-0 mt-1 bg-white border shadow-md rounded-lg w-max z-50`}>
       {items.map((subitem) => (
+
+
         <li key={subitem.name} className="border-b last:border-0 relative group/subitem">
-          <Link
-            href={subitem.href || "#"}
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center justify-between"
-          >
-            {subitem.name}
-            {subitem.sublinks && <ChevronDownIcon className="h-4 w-4 ml-2 transform -rotate-90" />}
+        <Link
+          href={subitem.href || "#"}
+          className="block p-4 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition-all ease-in-out"
+        >
+          <div className="flex flex-row items-center justify-between gap-4"> {subitem.name}{subitem.sublinks? <ChevronDown className="h-4 w-4" />:<ChevronRight className="h-4 w-4" />}</div>
+            
           </Link>
           {subitem.sublinks && (
             <div className="hidden group-hover/subitem:block">
@@ -121,9 +123,9 @@ const Navbar:React.FC = () => {
     <header className="bg-white border-b z-50">
       <div className="container mx-auto flex items-center justify-between py-4 px-6 lg:px-0">
         <div className="flex items-center space-x-4">
-          <img src="/fr crce logo.jpeg" alt="Logo" className="h-12" />
+          <img src="/fr crce logo.jpeg" alt="Logo" className="h-16" />
         </div>
-        <nav className="hidden lg:flex flex-grow justify-center space-x-6 text-sm font-medium">
+        <nav className="hidden lg:flex flex-grow justify-center space-x-6 ">
           {navItems.map((item) => (
             <div
               className="relative group"
@@ -133,10 +135,10 @@ const Navbar:React.FC = () => {
             >
               <Link
                 href={item.href || "#"}
-                className="relative text-gray-700 hover:text-gray-900 before:content-[''] before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-blue-800 before:scale-x-0 before:origin-left before:transition-transform before:duration-500 hover:before:scale-x-100 flex items-center"
+                className="relative flex flex-row items-center justify-center gap-1 text-gray-700 hover:text-gray-900 before:content-[''] before:absolute before:w-full before:h-[2px] before:bottom-0 before:left-0 before:bg-blue-800 before:scale-x-0 before:origin-left before:transition-transform before:duration-500 hover:before:scale-x-100 "
               >
                 {item.name}
-                {item.sublinks && <ChevronDownIcon className="h-4 w-4 ml-1" />}
+                {item.sublinks && <ChevronDown className="h-4 w-4" />}
               </Link>
               {item.sublinks && activeDropdown === item.name && (
                 <div
