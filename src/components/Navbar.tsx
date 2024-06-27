@@ -29,12 +29,12 @@ const Navbar = () => {
         </div>
         <nav className="hidden lg:flex flex-grow justify-center space-x-6 text-sm font-medium">
           {[
-            { name: "HOME", href: "/" },
+            { name: "HOME", href: "#" },
             {
               name: "ABOUT US",
               sublinks: [
-                { name: "About CRCE", href: "/about" },
-                { name: "From Director's Desk", href: "/director" },
+                { name: "About CRCE", href: "/AboutUs/AboutCRCE" },
+                { name: "From Director's Desk", href: "/AboutUs/" },
               ],
             },
             { name: "ACADEMICS" },
