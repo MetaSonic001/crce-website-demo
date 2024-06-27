@@ -10,39 +10,67 @@ interface FacultyMember {
 
 const facultyMembers: FacultyMember[] = [
     {
-        name: 'Dr. Sapna Prabhu',
-        title: 'Professor & Head',
-        degree: 'Ph.D.',
-        interests: 'Microprocessor system design, Embedded systems, Internet Of Things, Biomedical instrumentation, Computer Architecture',
-        image: '/path-to-image/sapna-prabhu.png',
+        title: 'Professor & HOD',
+        name: 'Dr. Sujata Deshmukh',
+        degree: 'Ph.D.(Tech.) in Info.Tech ',
+        interests: 'Data Mining, Machine Learning, Blockchain',
+        image: '/computerdept/sujata.png',
       },
       {
-        name: 'Dr. Deepak Bhoir',
-        title: 'Professor & Controller of Examination',
-        degree: 'Ph.D.',
-        interests: 'Instrumentation, Biomedical Instrumentation, Virtual Instrumentation, VLSI Design, MEMS, Automation',
-        image: '/path-to-image/deepak-bhoir.png',
-      },
-      {
-        name: 'Ms. Shilpa Patil',
-        title: 'Assistant Professor',
-        degree: 'M.E.',
-        interests: 'Digital Electronics, Power Electronics',
-        image: '/path-to-image/shilpa-patil.png',
-      },
-      {
-        name: 'Dr. John Doe',
         title: 'Professor',
-        degree: 'Ph.D.',
-        interests: 'Artificial Intelligence, Machine Learning',
-        image: '/path-to-image/john-doe.png',
+        name: 'Dr. Sunil Surve',
+        degree: 'Ph.D.(Electronics Engineering)',
+        interests: 'Artificial Intelligence, Machine Learning, Robotics, Cyber Security',
+        image: '/computerdept/surve.png',
+      },
+      {
+        title: 'Associate Professor',
+        name: 'Dr. Brijmohan Daga',
+        degree: 'Ph.D.(Computer Science Engineering)',
+        interests: 'Software engineering and Artificial Intelligence',
+        image: '/computerdept/daga.png',
+      },
+      {
+        title: 'Associate Professor',
+        name: 'Ms. Merly Thomas',
+        degree: 'Ph.D. (Computer Engg.)(Pursuing)',
+        interests: 'Computer Networks, Security & Distributed Computing ',
+        image: '/computerdept/merly.png',
+      },
+      {
+        title: 'Associate Professor',
+        name: 'Dr. Ashok M. Kanthe',
+        degree: 'Ph.D.(Computer Technology)',
+        interests: 'Wireless Network Security, Cyber Security, Machine Learning ',
+        image: '/computerdept/kanthe.png',
+      },
+      {
+        title: 'Associate Professor',
+        name: 'Mrs. Monica Khanore',
+        degree: 'Ph.D. (Electronics Engineering)',
+        interests: ' Telecommunications, Blockchain Technology and Computer Networks',
+        image: '/computerdept/monica.png',
+      },
+      {
+        title: 'Associate Professor',
+        name: 'Ms. Kalpana Deorukhkar',
+        degree: 'Ph.D. (Computer Engineering)(Pursuing)',
+        interests: 'Natural Language Processing, Data Structures, Advance Algorithm',
+        image: '/computerdept/kalpana.png',
+      },
+      {
+        title: 'Associate Professor',
+        name: 'Ms. Roshni Padate',
+        degree: 'Ph.D. (Computer Engineering)(Pursuing)',
+        interests: 'Image Processing, Data Warehouse and Mining ,Machine Learning, Deep Learning, Artificial Intelligence',
+        image: '/computerdept/roshni.png',
       },
 ];
 
 const FacultyPage: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-8">Department of Electronics & Computer Science - Faculty Members</h1>
+      <h1 className="text-3xl font-bold text-center mb-6">Department of Computer Engineering - Faculty Members</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {facultyMembers.map((member, index) => (
           <FacultyCard

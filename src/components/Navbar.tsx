@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-const Navbar = () => {
-  const [activeDropdown, setActiveDropdown] = useState(null);
-  const [hideTimeout, setHideTimeout] = useState(null);
+const Navbar:React.FC = () => {
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [hideTimeout, setHideTimeout] = useState<NodeJS.Timeout | null>(null);
 
-  const handleMouseEnter = (name) => {
+  const handleMouseEnter = (name: string) => {
     if (hideTimeout) {
       clearTimeout(hideTimeout);
       setHideTimeout(null);
